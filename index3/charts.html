@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--echart.js-->
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--滚动条延迟特效-->
+		<script src="js/scrollRevealv0.1.3.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div data-scroll-reveal id="main" style="width: 80%;height:400px; margin: 0 auto;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+			        text: '共享单车 '
+			    },
+			    tooltip: {},
+			    legend: {
+			    	
+	                data:['销量','小黄单车','其他','其他1']
+	            },
+			    xAxis: {
+			    	
+			        data: ['项目1', '项目2', '项目3', '项目4', '项目5','项目6']
+			    },
+			    yAxis: {
+			    	type: 'value',
+			    	name:'单位（亿元）'
+			    },
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    
+    
+    <div data-scroll-reveal id="main1" style="width: 80%;height:600px; margin: 0 auto;"></div>
+    <script>
+        // 绘制图表。
+        echarts.init(document.getElementById('main1')).setOption({
+            series: {
+            	name:'访问来源',
+                type: 'pie',
+                data: [
+                    {name: '小明:20h',value: 2},
+                    {name: '小红:20h',value: 2,},
+                    {name: '小蓝:60h',value: 6},
+                    {name: '小h:60h',value: 6}
+                ]
+            }
+        });
+    </script>
+    
+    <div data-scroll-reveal id="main2" style="width: 80%; height:600px; margin: 0 auto;"></div>
+    <script type="text/javascript">
+    var myChart2 = echarts.init(document.getElementById('main2'));	
+    
+    myChart2.setOption({
+//  	背景颜色:
+    	backgroundColor: 'gray',
+    series : [
+        {
+            name: '时间',
+            type: 'pie',
+            radius: '70%',
+            tooltip: {},
+            roseType: 'angle',
+            data:[
+                {value:2, name:'视频广告'},
+                {value:1.5, name:'联盟广告'},
+                {value:3, name:'邮件营销'},
+                {value:2.5, name:'直接访问'},
+                {value:1, name:'搜索引擎'}
+            ]
+        }
+    ]
+})
+    	var option2={
+    		tooltip:{},
+    		
+    	}
+    	// 使用刚指定的配置项和数据显示图表。
+    	myChart2.setOption(option2);
+    </script>
+    
+    <div class="text-center">
+    	<h2>图表三</h2>
+    </div>
+    <div data-scroll-reveal id="main3" style="width: 80%;height:600px; margin: 0 auto;">
+    </div>
+    <style type="text/css">
+    	p {
+    		font-size: ;
+    	}
+    </style>
+    <script type="text/javascript">
+    var myChart3 = echarts.init(document.getElementById('main3'));	
+    
+    myChart3.setOption({
+    	
+    	
+//  	背景颜色:
+//  	backgroundColor: '#2c343c',
+    	series : [{
+    		 	
+                    radius: ['0', '70%'],
+                    center: ['50%', '50%'],
+                
+            	name: '市场份额',
+            	type: 'pie',
+//          	radius: '70%',
+            	tooltip: {
+            		trigger: 'item',
+	                formatter: "{a} <br/>{b} : {c}亿 {d}%"
+	            	},
+            
+            	data:[
+                	{name:'摩拜单车',value:100},
+                	{name:'ofo小黄车',value:80},
+                	{name:'小蓝单车',value:15},
+                	{name:'hellobike',value:6},
+                	{name:'unibike',value:4},
+                	{name:'其他',value:5}
+            		]
+        		}]
+	})
+    	var option3={
+//  		 title : {
+//              text: '实例',
+//              subtext: '单车示例3',
+//              x:'center'
+//          },
+    		tooltip:{},
+    		legend: { 
+    			right: 'center',
+                top: '0',
+                orient: 'horizontal',
+	            data:['摩拜单车','ofo小黄车','小蓝单车','hellobike','unibike','其他']
+	          
+	           },
+    		 toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                	}
+            },
+            calculable : true
+	            
+    		
+    	}
+    	// 使用刚指定的配置项和数据显示图表。
+    	myChart3.setOption(option3);
+    </script>
+    
+    <h2 class="text-center">数据示例</h2>
+    <div data-scroll-reveal id="main4" style="width: 80%;height:600px; margin: 0 auto;">
+    <script type="text/javascript">
+    	var myChart4 = echarts.init(document.getElementById('main4'));
+		// 显示标题，图例和空的坐标轴
+		myChart4.setOption({
+		    title: {
+		        text: '异步数据加载示例'
+		    },
+		    tooltip: {},
+		    legend: {
+		        data:['销量']
+		    },
+		    xAxis: {
+		        data: []
+		    },
+		    yAxis: {},
+		    series: [{
+		        name: '销量',
+		        type: 'bar',
+		        data: []
+		    }]
+		});
+		
+		// 异步加载数据
+		$.get('data.json').done(function (data) {
+		    // 填入数据
+		    myChart4.setOption({
+		        xAxis: {
+		            data: data.categories
+		        },
+		        series: [{
+		            // 根据名字对应到相应的系列
+		            name: '销量',
+		            data: data.data
+		        }]
+		    });
+		});
+		
+		function fetchData(cb) {
+	    // 通过 setTimeout 模拟异步加载
+	    setTimeout(function () {
+	        cb({
+	            categories: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+	            data: [5, 20, 36, 10, 10, 20]
+	        });
+	    }, 1000);
+}
+    </script>
+		
+	</body>
+</html>

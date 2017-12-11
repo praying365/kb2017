@@ -1,0 +1,362 @@
+html,body,div,ul,ul li,h1,h2,h3,h4,h5,h6,video,img,a,hr,p,footer {
+    	margin: 0;
+    	padding: 0;
+    	border: 0;
+    	font-family: "microsoft yahei";
+    	/*overflow: hidden;*/
+    	}
+ul li {
+	list-style: none;
+}
+
+/*去除点击后的边框*/
+a:focus {
+	outline: none;
+}
+
+body {
+	/*height: 3500px;*/
+	font-size: 12px;
+	width: 100%;
+	/*height: auto;*/
+	/*overflow: hidden;*/
+	
+}
+#section_header ul li a {
+			line-height: 38px;
+			font-size: 18px;
+		}
+		
+header {
+	width: 100%;
+	height: 70px;
+	background: #6c6b6b;
+}
+.header-all {
+	padding-left: 2.2em;
+}
+
+.header-all img {
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	opacity: .7;
+}
+.header-all img:hover {
+	opacity:1;
+}
+.header-nav {
+	line-height: 70px;
+	/*width: 50px;*/
+	float: right;
+	padding-right: 3.5em;
+	font-size: 1.2em;
+}
+.header-nav a {
+	color: white;
+	opacity: .7;
+	outline:none;
+	
+}
+.header-all a:focus{outline:none;}
+
+.header-nav a:hover {
+	text-decoration: none;
+	color: white;
+	opacity: 1;
+}
+.header-nav a:active {
+}
+
+.header-nav a:visited  {
+	color: white;
+	text-decoration: none;
+	
+}
+.header-nav a:link {
+	color: white;
+	text-decoration: none;
+}
+
+
+main  {
+	padding-bottom: 40px;
+	
+}
+
+main .banner {
+	/*width: 100%;
+	height: 400px;
+	background-image: url(../img/craftraft.png);
+	background-size: 100% 100%;
+	background-attachment:fixed;*/
+	/*opacity: .9;*/
+	
+}
+
+.banner-play img {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	
+	opacity: .7;
+}
+
+.banner-play img:hover {
+	transition: all .3s ease;
+	transform: scale(1.08);
+	opacity: 1;
+}
+
+.banner-play img {
+	transition: all .3s ease;
+	transform: scale(1);
+	
+}
+
+.banner-play a:focus {
+	outline: none;
+}
+
+main .banner h2 {
+	/*padding-top:50px ;
+	font-size: 40px;
+	font-weight: 700;*/
+}
+
+article h2 { font-family: 'Lobster Two'; font-size: 32px; margin: 25px 0; line-height: 1em; }
+
+#second.story { 
+	height: 600px; 
+	padding: 0; 
+	margin: 0; 
+	width: 100%; 
+	/*max-width: 1920px;*/
+	position: relative; 
+	margin: 0 auto; 
+	overflow: hidden;
+	}
+
+
+/* Background Only */
+#second { 
+	background: url(../img/2017.2.jpg) 50% 0 no-repeat fixed;
+	 }
+#second { 
+	padding: 50px 0;
+	
+}
+#second article { 
+	position: absolute;
+	/*background: url(../img/1.png) repeat #333;*/ 
+	/*color: #fff;*/ 
+	/*width: 445px;*/ 
+	margin-top: 10%; 
+	/*margin-left: 5%;*/ 
+	padding: 10px 20px; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+	line-height: 1.5em; 
+	border: 1px solid rgba(150,150,150,0.1); 
+	}
+#second article p { 
+	margin-bottom: 25px;
+	 }
+#second article a { 
+	color: #ff0;
+	}
+
+
+
+main .text {
+	/*margin: 0 auto;*/
+	
+	text-align: center;
+	padding-bottom: 80px;
+}
+
+main .text h2 {
+	margin: 40px auto;
+	color: #080808;
+	font-size: 35px;
+}
+main .text p {
+	margin: auto 20%;
+	color: #080808;
+	font-size: 16px;
+}
+
+main .hr {
+	color: gray;
+	font-size: 18px;
+	padding-bottom: 60px;
+}
+
+main .hr hr {
+	margin: 0 auto;
+}
+
+/*特征*/
+main .con {
+	/*height: 400px;*/
+	/*text-align: center;*/
+	/*padding-bottom: 70px;*/
+	overflow: hidden;
+	
+}
+main .con img {
+	margin: 0 auto;
+	padding: 5%;
+	padding-bottom: 0;
+}
+
+/*main .con:hover {
+	background: chocolate;
+	color: #FFFFFF;
+}*/
+
+main .con .t {
+	padding: 10% 10%;
+	
+}
+main .con .t h3 {
+	font-size: 2.5em;
+	/*line-height: 50px;*/
+}
+
+main .row5 {
+	margin-bottom: 60px;
+}
+
+/*推荐产品*/
+main .price {
+	height: 350px;
+	text-align: center;
+	/*border: 1px solid #000000;*/
+}
+main .price img {
+	/*line-height: 350px;*/
+}
+
+main .price div:last-child {
+	padding-top: 3%;
+}
+main .add {
+	margin: 0 auto;
+	width: 90%;
+}
+main .add h3{
+	line-height: 70px;
+	font-family: 25px;
+}
+
+main .co {
+	margin-bottom: 40px;
+}
+main .co h4 {
+	font-size: 20px;
+	/*line-height: 30px;*/
+}
+main .co h4,.co p {
+	/*text-indent: 1em;
+	font-size: 20px;*/
+}
+main .co .co-img {
+	background: whitesmoke;
+	overflow: hidden;
+	padding: 10%;
+}
+/*移动*/
+main .co .co-img img:hover {
+	transition: all 1s ease;
+	transform: scale(1.05);
+}
+
+
+/*main .co .co-img img:hover {
+	transition: all 1s ease;
+	transform: scale(1.05);
+}*/
+/*复位*/
+main .co .co-img img {
+	transition: all 1s ease;
+	transform: scale(1);
+}
+
+
+
+footer {
+	clear: both;
+	/*position: fixed;*/
+	width: 100%;
+	margin: 0 auto;
+	background: #252a2c;
+	bottom: 0;
+	
+}
+
+.footer {
+	width: 85%;
+	color: #FFFFFF;
+	margin: 0 auto;
+	font-size: 12px;
+}
+.footer p a {
+	color: #FFF;
+}
+
+.footer p a:hover {
+	opacity: .7;
+}
+
+.footer p a:focus{
+	outline:none;
+	}
+.footer p a:link {
+	text-decoration: none;
+}
+
+.footer .row {
+	padding-top: 40px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.footer .copy {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	bottom: 0;
+	font-size: 12px;
+	color: white;
+}
+
+
+main .dis {
+	display: none;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+	.row2 , .row4 {
+		/*display: none;*/
+	}
+	main .dis {
+		display: block;
+	}
+	main .ab {
+		display: none;
+	}
+	
+	main .con .t {
+	padding: 0 10%;
+	}
+	main .con img {
+		margin-top: 30px;
+	}
+	
+}

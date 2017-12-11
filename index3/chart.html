@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>光盐交互数据</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--浏览器地址栏显示的图片-->
+		<link rel="icon" type="img/png" href="img/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--echart.js-->
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background: antiquewhite;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 class="text-center">图表1</h2>
+		<div id="main3" style="width: 80%;height:500px; margin: 0 auto;"></div>
+		<script type="text/javascript">
+			var myChart3= echarts.init(document.getElementById('main3'));
+			var option3 = {
+            title: {
+			        text: '使用软件 ',
+			        subtext:'第一天',
+			        left:'0',
+			        top:'0'
+			        
+			    },
+			    tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+						        }
+			    },
+			    toolbox: {
+			        show: true,
+			        orient: 'vertical',
+			        right: '20',
+			        top: 'center',
+			        feature: {
+			            mark: {show: true},
+			            dataView: {show: true, readOnly: false},
+			            magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+			            restore: {show: true},
+			            saveAsImage: {show: true}
+			            }
+			    },
+			    legend: {
+	                data:['小红','小明','小刚','小王']
+	           },
+			    xAxis: {
+			        data: ['Chrome', 'IE', 'Desktop', 'Word', 'PPT','Excel','Keil','AI','PS','QQ','暴风']
+			    },
+			    yAxis: {
+			    	type: 'value',
+			    	name:'分钟',
+//			    	max: 50
+			    },
+            series: [{
+                name: '小红',
+                type: 'bar',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:213, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:30, name:'Desktop'},
+		                {value:21, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:52, name:'QQ'},
+		                {value:125, name:'暴风'}
+		            ]
+                },{
+                name: '小明',
+                type: 'bar',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:71, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:32, name:'Desktop'},
+		                {value:40, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:327, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:0, name:'暴风'}
+		            ]
+            },{
+                name: '小刚',
+                type: 'bar',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:0, name:'Chrome'},
+		                {value:31, name:'IE'},
+		                {value:70, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:197, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:113, name:'QQ'},
+		                {value:40, name:'暴风'}
+		            ]
+            },{
+                name: '小王',
+                type: 'bar',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:156, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:41, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:130, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:131, name:'AI'},
+		                {value:213, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:0, name:'暴风'}
+		            ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart3.setOption(option3);
+    	</script>
+    	
+    	<h2 class="text-center">图表2</h2>
+		<div id="main1" style="width: 80%;height:500px; margin: 0 auto;"></div>
+		<script type="text/javascript">
+			var myChart1= echarts.init(document.getElementById('main1'));
+			var option1 = {
+            title: {
+			        text: '使用软件 ',
+			        subtext:'第二天',
+			        left:'0',
+			        top:'0'
+			    },
+			    tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+						         }
+
+			    },
+			    toolbox: {
+			        show: true,
+			        orient: 'vertical',
+			        right: '20',
+			        top: 'center',
+			        feature: {
+			            mark: {show: true},
+			            dataView: {show: true, readOnly: false},
+			            magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+			            restore: {show: true},
+			            saveAsImage: {show: true}
+			            }
+			    },
+			    legend: {
+	                data:['小红','小明','小刚','小王']
+	           },
+			    xAxis: {
+			        data: ['Chrome', 'IE', 'Desktop', 'Word', 'PPT','Excel','Keil','AI','PS','QQ','LOL']
+			    },
+			    yAxis: {
+			    	type: 'value',
+			    	name:'分钟',
+//			    	max: 50
+			    },
+            series: [{
+                name: '小红',
+                type: 'bar',
+                stack: '总量',
+	            label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:2, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:15, name:'Desktop'},
+		                {value:3, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:320, name:'LOL'}
+		            ]
+                },{
+                name: '小明',
+                type: 'bar',
+                stack: '总量',
+	            label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:31, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:50, name:'Desktop'},
+		                {value:12, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:389, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:0, name:'LOL'}
+		            ]
+            },{
+                name: '小刚',
+                type: 'bar',
+                stack: '总量',
+	            label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                
+                data:[
+		                {value:0, name:'Chrome'},
+		                {value:121, name:'IE'},
+		                {value:45, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:154, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:31, name:'QQ'},
+		                {value:0, name:'LOL'}
+		            ]
+            },{
+                name: '小王',
+                type: 'bar',
+                stack: '总量',
+	            label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:79, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:39, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:23, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:127, name:'AI'},
+		                {value:311, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:0, name:'LOL'}
+		            ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+    	</script>
+    	
+    	
+    	<h2 class="text-center">图表3</h2>
+		<div id="main2" style="width: 80%;height:500px; margin: 0 auto;"></div>
+		<script type="text/javascript">
+			var myChart2= echarts.init(document.getElementById('main2'));
+			var option2 = {
+            title: {
+			        text: '使用软件 ',
+			        subtext:'第三天',
+			        left:'0',
+			        top:'0'
+			    },
+			    tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+						         }
+
+			    },
+			    toolbox: {
+			        show: true,
+			        orient: 'vertical',
+			        right: '20',
+			        top: 'center',
+			        feature: {
+			            mark: {show: true},
+			            dataView: {show: true, readOnly: false},
+			            magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+			            restore: {show: true},
+			            saveAsImage: {show: true}
+			            }
+			    },
+			    legend: {
+	                data:['小红','小明','小刚','小王']
+	           },
+			    xAxis: {
+			        data: ['Chrome', 'IE', 'Desktop', 'Word', 'PPT','Excel','Keil','AI','PS','QQ','暴风']
+			    },
+			    yAxis: {
+			    	type: 'value',
+			    	name:'分钟',
+//			    	max: 50
+			    },
+            series: [{
+                name: '小红',
+                type: 'line',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideTop'
+	                	}
+	            },
+                data:[
+		                {value:34, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:12, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:30, name:'QQ'},
+		                {value:192, name:'暴风'}
+		            ]
+                },{
+                name: '小明',
+                type: 'line',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideTop'
+	                	}
+	            },
+                data:[
+		                {value:39, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:70, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:342, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:0, name:'暴风'}
+		            ]
+            },{
+                name: '小刚',
+                type: 'line',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideTop'
+	                	}
+	            },
+                
+                data:[
+		                {value:0, name:'Chrome'},
+		                {value:31, name:'IE'},
+		                {value:70, name:'Desktop'},
+		                {value:60, name:'Word'},
+		                {value:0, name:'PPT'},
+		                {value:37, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:0, name:'AI'},
+		                {value:0, name:'PS'},
+		                {value:49, name:'QQ'},
+		                {value:40, name:'暴风'}
+		            ]
+            },{
+                name: '小王',
+                type: 'line',
+                label: {
+	                normal: {
+	                    show: true,
+	                    center:'center'
+//	                    position: 'insideRight'
+	                	}
+	            },
+                data:[
+		                {value:151, name:'Chrome'},
+		                {value:0, name:'IE'},
+		                {value:98, name:'Desktop'},
+		                {value:0, name:'Word'},
+		                {value:89, name:'PPT'},
+		                {value:0, name:'Excel'},
+		                {value:0, name:'Keil'},
+		                {value:212, name:'AI'},
+		                {value:30, name:'PS'},
+		                {value:0, name:'QQ'},
+		                {value:0, name:'暴风'}
+		            ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+    	</script>
+    
+    
+    
+    
+    <div class="text-center">
+    	<h2>图表4</h2>
+    </div>
+    <div id="main4" style="width: 80%;height:600px; margin: 0 auto;">
+    </div>
+    <style type="text/css">
+    	
+    </style>
+    <script type="text/javascript">
+    var myChart4 = echarts.init(document.getElementById('main4'));	
+    
+    myChart4.setOption({
+    	
+    	
+//  	背景颜色:
+//  	backgroundColor: '#2c343c',
+    	series : [
+    	{
+    		 	
+                    radius: ['20', '55%'],
+                    center: ['70%', '50%'],
+                
+            	name: '使用软件时间',
+            	type: 'pie',
+//          	radius: '70%',
+				roseType: 'angle',
+            	
+	            
+            	data:[
+					{name:'Chrome',value:213+71+0+156+2+31+0+79+34+39+0+151},
+                	{name:'IE',value:0+0+31+0+0+0+121+0+0+0+31+0},
+                	{name:'Desktop',value:30+32+70+41+15+50+45+39+12+70+70+98},
+                	{name:'Word',value:21+40+0+0+3+12+0+0+0+0+60+0},
+                	{name:'PPT',value:0+0+0+130+0+0+0+23+0+0+0+89},
+                	{name:'Excel',value:0+0+197+0+0+0+154+0+0+0+37+0},
+                	{name:'Keil',value:0+327+0+0+0+389+0+0+0+342+0+0},
+                	{name:'AI',value:0+0+0+131+0+0+0+127+0+0+0+212},
+                	{name:'PS',value:0+0+0+213+0+0+0+311+0+0+0+30},
+                	{name:'QQ',value:52+0+113+0+0+0+31+0+30+0+49+0},
+                	{name:'暴风',value:125+0+40+0+0+0+0+0+192+0+0+0},
+                	{name:'LOL',value:320}
+            		]
+        		},
+//  	开始
+    	    	{
+    		 	
+                    radius: ['0', '55%'],
+                    center: ['20%', '50%'],
+                
+            	name: '使用软件时间',
+            	type: 'pie',
+//          	radius: '70%',
+            	tooltip: {
+            		trigger: 'item',
+	                formatter: "{a} <br/>{b} : {c}分钟 {d}%"
+	            	},
+	            
+            	data:[
+                	{name:'Chrome',value:213+71+0+156+2+31+0+79+34+39+0+151},
+                	{name:'IE',value:0+0+31+0+0+0+121+0+0+0+31+0},
+                	{name:'Desktop',value:30+32+70+41+15+50+45+39+12+70+70+98},
+                	{name:'Word',value:21+40+0+0+3+12+0+0+0+0+60+0},
+                	{name:'PPT',value:0+0+0+130+0+0+0+23+0+0+0+89},
+                	{name:'Excel',value:0+0+197+0+0+0+154+0+0+0+37+0},
+                	{name:'Keil',value:0+327+0+0+0+389+0+0+0+342+0+0},
+                	{name:'AI',value:0+0+0+131+0+0+0+127+0+0+0+212},
+                	{name:'PS',value:0+0+0+213+0+0+0+311+0+0+0+30},
+                	{name:'QQ',value:52+0+113+0+0+0+31+0+30+0+49+0},
+                	{name:'暴风',value:125+0+40+0+0+0+0+0+192+0+0+0},
+                	{name:'LOL',value:320}
+            		]
+        		}
+    	
+//  	结束
+    	]
+	})
+    	var option4={
+			title: {
+			    text: '使用软件合计 ',
+//			    subtext:'合计',
+			    x:'0'
+			    },
+    		tooltip: {
+            		trigger: 'item',
+	                formatter: "{a} <br/>{b} : {c}分钟 {d}%"
+	            	},
+    		toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                	}
+            },
+            calculable : true,
+            
+    		legend: { 
+    			right: 'center',
+                top: '0',
+                orient: 'horizontal',
+	            data:['Chrome','IE','Desktop','Word','PPT','Excel','Keil','AI','PS','QQ','暴风','LOL']
+	          
+	         }
+	            
+    		
+    	}
+    	// 使用刚指定的配置项和数据显示图表。
+    	myChart4.setOption(option4);
+    </script>
+	</body>
+</html>
